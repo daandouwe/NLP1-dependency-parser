@@ -1,0 +1,37 @@
+NOTES on Adam vs SGD solver
+
+I had to manually change the epoch1 predicted conll file on two places: these are at line 10566, and line 17418.
+
+I had to manually change the epoch1 predicted conll file in one place: at line 13109.
+
+This was simply necessary due to apparent malfunctioning of the conll-predicting code, and I really just needed to see if the adam solver really worked better. And it didn’t.
+
+Comparison:
+
+sgd solver for epoch1 model:
+
+  Labeled   attachment score: 28125 / 35446 * 100 = 79.35 %
+  Unlabeled attachment score: 29546 / 35446 * 100 = 83.35 %
+  Label accuracy score:       30449 / 35446 * 100 = 85.90 %
+
+adam solver for epoch1 model (from manually edited version, so performance at least geq (>=) than original):
+
+  Labeled   attachment score: 26365 / 35446 * 100 = 74.38 %
+  Unlabeled attachment score: 28069 / 35446 * 100 = 79.19 %
+  Label accuracy score:       28980 / 35446 * 100 = 81.76 %
+
+
+sgd solver for epoch2 model:
+
+  Labeled   attachment score: 28911 / 35446 * 100 = 81.56 %
+  Unlabeled attachment score: 30159 / 35446 * 100 = 85.08 %
+  Label accuracy score:       31040 / 35446 * 100 = 87.57 %
+
+adam solver for epoch2 model:
+
+  Labeled   attachment score: 27271 / 35446 * 100 = 76.94 %
+  Unlabeled attachment score: 28834 / 35446 * 100 = 81.35 %
+  Label accuracy score:       29656 / 35446 * 100 = 83.67 %
+
+
+SO for both epochs adam is a whooping 4-5% worse than sgd! So we will not use adam!

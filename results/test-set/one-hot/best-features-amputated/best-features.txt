@@ -1,0 +1,8 @@
+best-features-amputated means we removed only the features:
+
+s_i for i=1,2
+b_i for i=1,2
+
+This means that 
+
+tags_labels_embedding=[0,1,18,19]

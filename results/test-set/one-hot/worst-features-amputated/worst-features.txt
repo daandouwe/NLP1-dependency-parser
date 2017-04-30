@@ -1,0 +1,19 @@
+worst-features-amputated means we removed all the features except:
+
+s_i for i=1,2,3
+b_i for i=1,2,3
+
+s_i.t for i=1,2,3
+b_i.t for i=1,2,3
+
+lc_1(s_i).l for i=1,2
+lc_2(s_i).l for i=1,2
+rc_1(s_i).l for i=1,2
+rc_2(s_i).l for i=1,2
+
+This means that 
+
+tags_labels_embedding=[6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 44, 45, 46, 47]
+
+
+All 
